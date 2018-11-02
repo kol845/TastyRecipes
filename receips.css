@@ -1,20 +1,5 @@
 
-.recTit{
-    color:LightPink;
-    font-size: : 150em;
-    font-family: verdana;
-}
-.recH1{
-    color:LightPink;
-    font-size: : 100em;
-    font-family: verdana;
-}
-.recUl {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+
 h1{
     font-size:250%;
     color: black;
@@ -25,21 +10,20 @@ h2 {
     font-size:200%;
     color: Peru;
 }
-div{
-    margin-top: 3%;
-    margin-left: 3%;
 
-    width: 50%;
-}
 div ul{
     list-style: inside;
     padding: 0;
     margin: 0;
     background-color: transparent;
 }
-div li{
+div.receipContent li{
     font-weight:bold;
-    margin-bottom: 0.2%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
     float:none;
 }
 p{
@@ -50,10 +34,20 @@ p{
 #bold{
     font-weight:bold;
 }
+ol{
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
 
 img {
     float:right;
-    width: 30em;
-    height: 30em;
+    max-width: 50%;
+    max-height: 60%;
     border-radius: 50%;
 }
