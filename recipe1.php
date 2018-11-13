@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="receips.css">
+    <?php  include "header.php";     ?>
+    <meta charset="UTF-8">
+    <title>Meatbals</title>
 </head>
 <body>
 
-<ul>
-    <div>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="recipe1.html">Meatballs Recipe</a></li>
-        <li><a href="recipe2.html">Pancakes Recipe</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-    </div >
-</ul>
+
+
+  <?php
+  session_start();
+   showHeader(1); ?>
+
+
 
 <div class = "receipContent">
     <img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_2EcZowoTZeyUaqG4gosWkM_sweet-spicy-meatballs_landscapeThumbnail_en.png" alt="Meatballs">
@@ -45,6 +47,8 @@
     </ol>
 
 </div>
+
+
 
 
 </body>

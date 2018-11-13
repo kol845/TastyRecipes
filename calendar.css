@@ -1,0 +1,58 @@
+div.header{
+  margin:auto;
+  margin-top: 5%;
+
+}
+div.container{
+  background-color: green;
+  margin:auto;
+}
+.date{
+  font-size: 2em;
+  color:Peru;
+  float:none;
+  text-align: center;
+  font-weight:bold;
+}
+
+
+
+
+
+
+
+.flex-grid {
+  display: flex;
+  background-color: Bisque;
+
+}
+.days {
+  border: 3px solid black;
+  text-align: center;
+  font-size: 1.2em;
+  flex: 1;
+}
+.box {
+  border: 2px solid black;
+  font-size: 0.8em;
+  flex: 1;
+  height: 6em;
+}
+.box-for-old-month {
+  border: 2px solid black;
+  background-color: #ffd199;
+  font-size: 0.8em;
+  color: grey;
+  flex: 1;
+  height: 6em;
+}
+
+img {
+    float:right;
+    max-width: 90%;
+    max-height: 100%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

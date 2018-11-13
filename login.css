@@ -1,0 +1,15 @@
+.mainLogin{
+    padding: 15px;
+    width: 400px;
+    min-height: 400px;
+    margin: 2% auto 0 auto;
+    margin: auto;
+    text-align: center;
+
+}
+.mainLogin a{
+    margin:inherit;
+    float:left;
+    margin-top: 5%;
+    width:300px;
+}
