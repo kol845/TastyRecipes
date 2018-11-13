@@ -2,7 +2,11 @@
 <html lang = "en">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD:recipe2.php
   <title>Pancakes</title>
+=======
+  <title>Meaballs</title>
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:recipe2.html
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="receips.css">
@@ -11,9 +15,20 @@
 <body>
 
 
+<<<<<<< HEAD:recipe2.php
 <?php
 session_start();
  showHeader(2); ?>
+=======
+  <ul>
+    <div>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipe1.html">Meatballs Recipe</a></li>
+    <li><a class="active" href="recipe2.html">Pancakes Recipe</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    </div >
+  </ul>
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:recipe2.html
 
 
 <div class = "receipContent">

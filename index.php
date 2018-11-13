@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+<<<<<<< HEAD:index.php
     <?php
     if(!isset($_SESSION))
     {
@@ -10,14 +11,28 @@
     }
      include "header.php";
      ?>
+=======
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:index.html
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
+<<<<<<< HEAD:index.php
       <?php
 
       showHeader(0);
       ?>
+=======
+
+      <ul>
+        <div>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="recipe1.html">Meatballs Recipe</a></li>
+        <li><a href="recipe2.html">Pancakes Recipe</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        </div>
+      </ul>
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:index.html
 
 <div>
     <?php

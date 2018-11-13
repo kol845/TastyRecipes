@@ -4,17 +4,33 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="receips.css">
+<<<<<<< HEAD:recipe1.php
     <?php  include "header.php";     ?>
     <meta charset="UTF-8">
     <title>Meatbals</title>
+=======
+    <meta charset="UTF-8">
+    <title>Pancakes</title>
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:recipe1.html
 </head>
 <body>
 
 
 
+<<<<<<< HEAD:recipe1.php
   <?php
   session_start();
    showHeader(1); ?>
+=======
+  <ul>
+    <div>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="recipe1.html">Meatballs Recipe</a></li>
+    <li><a href="recipe2.html">Pancakes Recipe</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    </div >
+  </ul>
+>>>>>>> c57af1e5a266d11aa7c6c76e6d13252858cb7d0f:recipe1.html
 
 
 
