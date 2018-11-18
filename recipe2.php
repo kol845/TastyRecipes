@@ -6,13 +6,19 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="receips.css">
-    <?php  include "header.php";     ?>
+    <?php
+    include "header.php";
+    include "commentSection.php";
+    ?>
 </head>
 <body>
 
 
 <?php
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
  showHeader(2); ?>
 
 
@@ -40,6 +46,16 @@ session_start();
 
 </div>
 
+<div class = "commentContent">
+
+    <form method="post" action="addComment.php?recipe2">
+        <br>
+        Enter comment here: <input type="text" name="comment"rows="4" cols="50"><br>
+        <input type="submit" name="button" value="Submit"/>
+    </form>
+    <?php showComments(2);?>
+
+</div>
 
 </body>
 </html>

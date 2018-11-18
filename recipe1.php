@@ -56,9 +56,6 @@
 
 <div class = "commentContent">
 
-
-
-
     <form method="post" action="addComment.php?recipe1">
         <br>
         Enter comment here: <input type="text" name="comment"rows="4" cols="50"><br>

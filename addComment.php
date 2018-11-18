@@ -8,18 +8,21 @@ else{
     if (isset($_POST['comment']) and !empty($_POST['comment'])) {
         if($_SERVER['QUERY_STRING'] == "recipe1"){
             $file = "./database/receipe1data.txt";
+            $pathBack = "recipe1.php";
         }
         else{
             $file = "./database/receipe2data.txt";
+            $pathBack = "recipe2.php";
         }
         $current = file_get_contents($file);
         $commentToPost = $_SESSION['username'].":".$_POST['comment'];
-        $current .= "\n".$commentToPost;
+        $current = $commentToPost."\n".$current;
         file_put_contents($file, $current);
 
 
 
     }
-    include $_SERVER['QUERY_STRING'].".php";
+    header("Location:".$pathBack);
+    exit();
 }
 ?>
