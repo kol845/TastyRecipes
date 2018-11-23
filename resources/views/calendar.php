@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="calendar.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/calendar.css">
     <meta charset="UTF-8">
-    <?php  include "header.php";     ?>
+    <?php
+    include "../fragments/header.php";     
+
+    ?>
     <title>Calendar</title>
 </head>
 <body>
@@ -42,7 +45,7 @@
 <div class="flex-grid">
   <div class="box">5</div>
   <div class="box">6
-    <a href="recipe1.php"><img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_2EcZowoTZeyUaqG4gosWkM_sweet-spicy-meatballs_landscapeThumbnail_en.png"
+    <a href="resources/views/recipe1.php"><img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_2EcZowoTZeyUaqG4gosWkM_sweet-spicy-meatballs_landscapeThumbnail_en.png"
      alt="Meatballs"></a>
 
   </div>
@@ -56,7 +59,7 @@
   <div class="box">12</div>
   <div class="box">13</div>
   <div class="box">14
-    <a href="recipe2.php"><img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/homemade-pancakes.jpg" alt="Pancakes">
+    <a href="resources/views/recipe2.php"><img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/homemade-pancakes.jpg" alt="Pancakes">
     </a>
   </div>
   <div class="box">15</div>

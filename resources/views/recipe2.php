@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Pancakes</title>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="receips.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/receips.css">
     <?php
-    include "header.php";
+    include "./resources/fragments/header.php";
     include "commentSection.php";
     ?>
 </head>

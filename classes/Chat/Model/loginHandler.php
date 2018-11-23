@@ -2,6 +2,7 @@
 
 
 <?php
+require './resources/fragments/init.php';
 $file = "./database/logindata.txt";
 $document = file_get_contents($file);
 $lines = explode("\n",$document);
@@ -24,15 +25,15 @@ if(!empty($_POST["username"])) {
 		session_start();
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['loggedin']= true;
-		include 'index.php';
+		include VIEWS.'index.php';
 	}
 	else {
 		$message = "Invalid Username or Password!";
-		include "login.php";
+		include VIEWS.'login.php';
 	}
 	}
 else{
 $message = "Invalid Username or Password!";
-include "login.php";
+include VIEWS.'login.php';
 }
 ?>

@@ -1,7 +1,8 @@
 <?php
+require './resources/fragments/init.php';
 session_start();
 if(!(isset($_SESSION['loggedin']) and $_SESSION['loggedin'] == true)){
-    include "login.php";
+    include VIEWS.'login.php';
 }
 
 else{
@@ -22,7 +23,7 @@ else{
 
 
     }
-    header("Location:".$pathBack);
+    header("Location:".VIEWS.$pathBack);
     exit();
 }
 ?>

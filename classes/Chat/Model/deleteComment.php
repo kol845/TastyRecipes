@@ -1,6 +1,6 @@
 
 <?php
-
+require './resources/fragments/init.php';
 $commentToRemove = 0;
 foreach($_POST as $k => $v)
    $commentToRemove = $k;
@@ -25,7 +25,8 @@ foreach($_POST as $k => $v)
     $index+=1;
    }
    file_put_contents($file, $returnString);
-   header("Location:".$pathBack);
+
+   header("Location:".VIEWS.$pathBack);
    exit();
 
 
