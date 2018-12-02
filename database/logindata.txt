@@ -1,4 +1,4 @@
-pebo:123
-don:321
-kalle:666
-mister:555
+pebo:$2y$10$aYnQWanydo5R31xRPH2WP.1OiFsVBFOdHMkeZY99ZuDQQnIWryDbG
+don:$2y$10$BgpiW6ThU.VKlthV.kjFp.1uL.Af4putreaVmbMYSPekpdLvldEKK
+kalle:$2y$10$tCJMcWNMrcIuzSEqinehVeYy.3hHurwqv3Okg3vUjx6o4XDWsszg.
+mister:$2y$10$PzuxzwaFvs2a9SXvIAK9fOVDpySlBglY3rhGWepnqLxnOYMgHjiiC

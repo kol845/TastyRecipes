@@ -1,28 +1,35 @@
+<?php
+namespace Chat\View;
+use \Chat\Util\Util;
+use Chat\Controller\SessionManager;
+require_once 'classes/Chat/Util/Util.php';
+Util::initRequest();
+
+$controller = SessionManager::getController();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
-    <?php
-    if(!isset($_SESSION))
-    {
-        session_start();
-    }
-     include "./resources/fragments/header.php";
-     ?>
+    <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
+
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-      <?php
-      showHeader(0);
-      ?>
+  <?php
+  $pageNumber = 0;
+  include 'resources/fragments/header.php';
+
+   ?>
 
 <div>
     <?php
-        echo get_include_path();
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-        echo "<h1>Welcome " . $_SESSION['username'] . "!</h1>";
+    if ($controller->isLoggedIn()) {
+        echo "<h1>Welcome " . $controller->getUsername() . "!</h1>";
     }
     ?>
 

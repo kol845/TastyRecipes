@@ -94,3 +94,10 @@ p.commentBox{
     font-size: 100%;
     background-color: white;
 }
+p.errorMessage{
+    background-color: black;
+    border-radius: 25px;
+    border: 3px dotted black;
+    color:red;
+    font-size: 1000%;
+}
