@@ -1,3 +1,20 @@
+
+<head>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#logout").click(function(){
+                $.post("/doLogout.php",{},
+                    function(){
+                    $(".login").html("<a href=\"/resources/views/login.php\">Login</a>")
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
 <?php
 
 
@@ -14,9 +31,9 @@ $currentPages = array(
       "<li><a class=\"active\" href=\"/resources/views/recipe1.php\">Meatballs Recipe</a></li>",
       "<li><a class=\"active\" href=\"/resources/views/recipe2.php\">Pancakes Recipe</a></li>",
       "<li><a class=\"active\" href=\"/resources/views/calendar.php\">Calendar</a></li>",
-      "<li class=\"login\"><a class=\"active\" href=\"/resources/views/login.php\">Login</a></li>"
+      "<li class=\"login\"><a class=\"active\" >Login</a></li>"
 );
-$logout = "<li class=\"login\"><a c href=\"/doLogout.php\">Logout</a></li>";
+$logout = "<li class=\"login\"><a id = \"logout\">Logout</a></li>";
 
 
 
@@ -39,4 +56,6 @@ echo  "</ul>
       </div>";
 
 
+
 ?>
+</body>

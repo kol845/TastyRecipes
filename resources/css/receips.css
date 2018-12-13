@@ -101,3 +101,7 @@ p.errorMessage{
     color:red;
     font-size: 1000%;
 }
+#postedComments{
+    text-align: left;
+    margin: auto;
+}

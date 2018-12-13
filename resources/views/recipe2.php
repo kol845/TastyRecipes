@@ -15,6 +15,53 @@ $controller = SessionManager::getController();
     <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/receips.css">
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+      <script>
+          $(document).ready(function(){
+              $("button").click(function(){
+                  if(this.id=="deleteComment"){
+                      var commentLinePost = this.name;
+                      $.post("/doDeleteComment.php",{
+                          commentLine:commentLinePost,
+                          pageNumber:2
+                      },function(){
+                          $("#comment"+commentLinePost).remove();
+                      });
+                  }
+                  if(this.id=="addComment"){
+
+                      var addCommentText = $( "input[name = addCommentText]" ).val();
+                      if(!(addCommentText=="")){
+                          var addCommentText = $( "input[name = addCommentText]" ).val();
+
+                          $.post("/doAddComment.php",{
+                              comment:addCommentText,
+                              pageNumber:2
+                          },function(){
+                              var username = "<?php echo $controller->getUsername();?>";
+                              var strToAdd ="\n<div class = \"comment\" id =  \"comment0\">"+
+                                          "<img src=\"https://secure.gravatar.com/avatar/1eadcff9b71326bca48fa66e15f83986?s=60&d=mm&r=g\" alt=\"User Avatar\">"+
+                                          "<p class = \"commentAuthor\">"+username+"</p>"+
+                                          "<p class = \"commentBox\">"+addCommentText+"</p>"+
+                                          "<button id = \"deleteComment\" name= 0 value=\"Delete\">Delete</button>"+
+                                          "</div>";
+                                $( "#postedComments" ).prepend(strToAdd);
+                          });
+
+                      }
+                  }
+
+          });
+
+        });
+
+      </script>
+
+
 </head>
 <body>
 
@@ -59,40 +106,35 @@ $controller = SessionManager::getController();
         echo "<p class = \"errorMessage\">".$errorMessage."</p>";
         SessionManager::storeController($controller);
       }
-
     ?>
-    <form method="post" action="/doAddComment.php?recipe2">
         <br>
-        Enter comment here: <input type="text" name="comment"rows="4" cols="50"><br>
-        <input type="submit" name="button" value="Submit"/>
-    </form>
+        Enter comment here: <input type="text" name="addCommentText"rows="4" cols="50"><br>
+        <button id = "addComment" name="addCommentName" >Submit</button>
+
+    <div id = "postedComments">
     <?php
 
-
-
-
-
-    echo "<form method=\"post\" action=\"/doDeleteComment.php?recipe2\">";
-    $commentEntries = $controller->getComments(2);
+    $commentEntries = $controller->getComments($pageNumber);
     $commentLine = 0;
     foreach($commentEntries as $entry){
         if(!empty($entry->getUsername())){
 
-        echo "\n<div class = \"comment\">";
+        echo "\n<div class = \"comment\" id =  \"comment".$commentLine."\">";
         echo "<img src=\"https://secure.gravatar.com/avatar/1eadcff9b71326bca48fa66e15f83986?s=60&d=mm&r=g\" alt=\"User Avatar\">";
         echo "<p class = \"commentAuthor\">".$entry->getUsername()."</p>";
         echo "<p class = \"commentBox\">".$entry->getMessage()."</p>";
         if($entry->getUsername() == $controller->getUsername()){
-          echo "<input type=\"submit\" name=".$commentLine." value=\"Delete\">";
+          echo "<button id = \"deleteComment\" name=".$commentLine." value=\"Delete\">Delete</button>";
         }
         echo "</div>";
         }
         $commentLine+=1;
 
     }
-    echo "</form>";
     ?>
+    <div>
 
 </div>
+
 </body>
 </html>

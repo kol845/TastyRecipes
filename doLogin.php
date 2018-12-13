@@ -14,13 +14,13 @@ $controller = SessionManager::getController();
 
 //Password must contain at least one number
 if (empty($_POST[CHAT_USERNAME_KEY]) or empty($_POST[CHAT_PASSWORD_KEY])){
-    header("Location:".CHAT_VIEWS."login.php");
+    echo "unsuccessful";
     exit();
 }
 if(!(1 === preg_match('~[0-9]~', $_POST[CHAT_PASSWORD_KEY]))){
   $controller->setError(CHAT_ERROR_NONUMERICALVALUE_KEY);
   SessionManager::storeController($controller);
-  header("Location:".CHAT_VIEWS."login.php");
+  echo "unsuccessful";
   exit();
 }
 $username =htmlentities($_POST[CHAT_USERNAME_KEY],ENT_QUOTES);
@@ -28,6 +28,7 @@ $password = htmlentities($_POST[CHAT_PASSWORD_KEY],ENT_QUOTES);
 
 
 $users = $controller->getUsers();
+
 $loginSuccess = false;
 
 
@@ -39,11 +40,11 @@ foreach($users as $user){
   }
 }
 if(!$loginSuccess){
-  header("Location:".CHAT_VIEWS."login.php");
-  exit();
+  echo "unsuccessful";
+}
+else{
+    echo"successful";
 }
 
 
-
 SessionManager::storeController($controller);
-header("Location:".CHAT_VIEWS.'home.php');

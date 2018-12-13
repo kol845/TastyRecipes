@@ -17,7 +17,7 @@ class ChatHandler {
   * @param message the message that was written by the user
   */
   function addComment($receipePage,$userName,$message){
-          if($receipePage == "recipe1"){
+          if("".$receipePage == "1"){
               $file = $this->r1DataFile;
           }
           else{
@@ -33,7 +33,7 @@ class ChatHandler {
   * @param int line number of the entry that is to be removed
   */
   function deleteComment($receipePage, $commentToRemove){
-            if($_SERVER['QUERY_STRING'] == "recipe1"){
+            if("".$receipePage == "1"){
                 $file = $this->r1DataFile;
             }
             else{
